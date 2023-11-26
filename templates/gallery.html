@@ -14,43 +14,20 @@
       </div>
     </div>
 
- <style>
- .imageCont {
-     display: grid;
-     grid-template-columns: auto auto auto auto;
-     padding: 5px;
- }
 
- #imagegallery img{
-     height: 300px;
-     width: 100%;
-     padding: 4px;
- }
- </style>
+
     <section class="ftco-section ftco-gallery">
-    	<div class="container imageCont " id="imagegallery">
+    	<div class="container imageCont " >
 
 
-             <script>
-            // Use JavaScript to dynamically generate HTML elements
-            for (let i = 1; i <= 12; i++) {
-                // Create a new div element
-                var divElement = document.createElement('div');
+           {% for x in pics %}
 
-                // Create an img element and set its source attribute
-                var imgElement = document.createElement('img');
-                imgElement.src = '/static/Images/' + i + '.jpg';
+             <img src="{{ x.image.url }}" width="300" height="200" alt="Responsive image">
 
-                // Append the img element to the div element
-                divElement.appendChild(imgElement);
-
-                // Append the div element to the container
-                document.getElementById('imagegallery').appendChild(divElement);
-            }
-          </script>
+           {% endfor %}
 
 
-</div>
+       </div>
 
 
     </section>

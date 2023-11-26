@@ -16,12 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 import home
 from home import views
 
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path("gallery.html", views.Gallery),
@@ -31,7 +35,12 @@ urlpatterns = [
     path("blog.html", views.Blog),
     path("about.html", views.About),
     path("event.html", views.Event),
-    path("index.html", views.indexpage)
+    path("index.html", views.indexpage),
+    path("blog/hurricane1.html/<int:pk>/", views.Hurricanes),
+    path("cause/cause1.html/<int:pk>/", views.Causer1),
 
 
 ]
+
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
