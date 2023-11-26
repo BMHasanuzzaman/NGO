@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="hero-wrap" style="background-image: url('/static/assets/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Galleries</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <section class="ftco-section ftco-gallery">
+    	<div class="container imageCont " >
+
+
+           {% for x in pics %}
+
+             <img src="{{ x.image.url }}" width="300" height="200" alt="Responsive image">
+
+           {% endfor %}
+
+
+       </div>
+
+
+    </section>
+
+
+  {% endblock %}
