@@ -31,6 +31,7 @@
   </head>
   <body>
 
+
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">Welfare</a>
@@ -38,9 +39,12 @@
         <span class="oi oi-menu"></span> Menu
       </button>
 
-      <div class="collapse navbar-collapse" id="ftco-nav">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="/static/assets/js/hover.js"></script>
+
+     <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href={% url 'index' %} class="nav-link">Home</a></li>
+          <li class="nav-item"><a href={% url 'index' %} class="nav-link">Home</a></li>
           <li class="nav-item"><a href={% url 'about' %} class="nav-link">About</a></li>
           <li class="nav-item"><a href={% url 'causes' %} class="nav-link">Causes</a></li>
           <li class="nav-item"><a href={% url 'donate' %} class="nav-link">Donate</a></li>
@@ -50,6 +54,7 @@
           <li class="nav-item"><a href={% url 'contact' %} class="nav-link">Contact</a></li>
         </ul>
       </div>
+
     </div>
   </nav>
     <!-- END nav -->
@@ -92,7 +97,7 @@
                 </div>
               </div>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(/static/assets/images/image_2.jpg);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">
@@ -159,6 +164,17 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src={% static 'assets/js/google-map.js' %}></script>
   <script src={% static 'assets/js/main.js' %}></script>
+
+  <script>
+      const bar = document.getElementById('bar');
+const nav = document.getElementById('navbar');
+
+if (bar) {
+    bar.addEventListener('click', () => {
+        nav.classList.add('active');
+    })
+}
+  </script>
 
   </body>
 </html>
