@@ -28,17 +28,6 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path("gallery.html", views.Gallery),
-    path("causes.html", views.Causes),
-    path("contact.html", views.Contact),
-    path("donate.html", views.Donate),
-    path("blog.html", views.Blog),
-    path("about.html", views.About),
-    path("event.html", views.Event),
-    path("index.html", views.indexpage),
-    path("blog/hurricane1.html/<int:pk>/", views.Hurricanes),
-    path("cause/cause1.html/<int:pk>/", views.Causer1),
-
 
 ]
 

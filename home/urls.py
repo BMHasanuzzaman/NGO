@@ -18,6 +18,9 @@ urlpatterns = [
     path('causes/', views.Causes, name='causes'),
     path('blog/hurricane1.html/<int:pk>/', views.Hurricanes, name='hurricanes'),
     path('cause/causes1.html/<int:pk>/', views.Causer1, name='causer1'),
+    path('saveenquiry/', views.saveEnquiry,name='saveenquiry'),
+    # path('contact/send_email/', views.send_email,name=' send_email'),
+
 
 
 ]

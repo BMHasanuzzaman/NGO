@@ -8,6 +8,7 @@ from .models import *
 admin.site.register(Image)
 admin.site.register(Hurricane)
 admin.site.register(Causers)
+admin.site.register(contactInfo)
 
 
 

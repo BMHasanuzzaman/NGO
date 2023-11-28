@@ -36,3 +36,9 @@ class Causers(models.Model):
         ordering=('-id',)
     def __str__(self):
          return self.title
+
+class contactInfo(models.Model):
+        name=models.CharField(max_length=25)
+        email=models.CharField(max_length=40)
+        subject=models.CharField(max_length=15)
+        message=models.CharField(max_length=200)
