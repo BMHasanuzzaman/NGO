@@ -42,3 +42,14 @@ class contactInfo(models.Model):
         email=models.CharField(max_length=40)
         subject=models.CharField(max_length=15)
         message=models.CharField(max_length=200)
+
+
+class Donation(models.Model):
+    donor_name = models.CharField(max_length=255)
+    email = models.EmailField()
+    number= models.CharField(max_length=20)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+
+class Number(models.Model):
+   amount = models.CharField(max_length=20)
+

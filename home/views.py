@@ -1,9 +1,35 @@
-from django.shortcuts import render, get_object_or_404
+
 from django.shortcuts import render, redirect
+
+from .forms import DonationForm
 from .models import *
+from django.urls import reverse
 from django.core.mail import send_mail
-from django.conf import settings
+import stripe
+
+
 # from backend.settings import EMAIL_HOST_USER
+stripe.api_key = "pk_test_51ONB6tDbuhlL5pczt2S7ajD8V4RYhs0Ug99aXIOFLEkLGtJ3yFd934FqHDZBcflAT0Ixys2iBXXFZ2H8mHjx11j900RzcztKTZ";
+def donation(request):
+    if request.method == 'POST':
+        form = DonationForm(request.POST)
+        if form.is_valid():
+            donation_instance = form.save(commit=False)
+            donation_instance.save()
+
+            # Now you can use the data for Stripe payment
+            amount = form.cleaned_data['amount']
+            # Add your Stripe payment logic here using the 'amount' variable
+
+            return redirect('success')  # Redirect to a success page
+
+    else:
+        form = DonationForm()
+
+    return render(request, 'Donate_cart.html', {'form': form})
+def successMsg(request, args):
+    amount=args
+    return render(request, 'success.html', {'amount':amount})
 
 
 
@@ -14,7 +40,11 @@ from django.conf import settings
 
 # Create your views here.
 def indexpage(request):
-    return render(request, 'index.html')
+    category = Number.objects.all()
+    context={
+        'category':category,
+    }
+    return render(request, 'index.html',context)
 
 def About(request):
     return render(request, 'about.html')
@@ -93,3 +123,8 @@ def Causer1(request,pk):
     }
     # context = get_object_or_404(Hurricane, pk=id)
     return render(request,'causes1.html',context)
+
+
+def Donate_cart(request):
+    return render(request, 'Donate_cart.html')
+

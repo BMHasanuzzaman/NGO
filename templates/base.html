@@ -47,11 +47,15 @@
           <li class="nav-item"><a href={% url 'index' %} class="nav-link">Home</a></li>
           <li class="nav-item"><a href={% url 'about' %} class="nav-link">About</a></li>
           <li class="nav-item"><a href={% url 'causes' %} class="nav-link">Causes</a></li>
-          <li class="nav-item"><a href={% url 'donate' %} class="nav-link">Donate</a></li>
+{#          <li class="nav-item"><a href={% url 'donate' %} class="nav-link">Donate</a></li>#}
           <li class="nav-item"><a href={% url 'blog' %} class="nav-link">Blog</a></li>
           <li class="nav-item"><a href={% url 'gallery' %} class="nav-link">Gallery</a></li>
           <li class="nav-item"><a href={% url 'event' %} class="nav-link">Events</a></li>
           <li class="nav-item"><a href={% url 'contact' %} class="nav-link">Contact</a></li>
+            <button class="btn btn-primary">
+            <li class="nav-item"><a href={% url 'Donate_cart' %} class="nav-link">Donate</a></li>
+            </button>
+
         </ul>
       </div>
 

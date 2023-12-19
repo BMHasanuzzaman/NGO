@@ -6,7 +6,9 @@ from .views import *
 
 
 
+
 urlpatterns = [
+
 
     path('', views.indexpage, name='index'),
     path('about/', views.About, name='about'),
@@ -19,7 +21,9 @@ urlpatterns = [
     path('blog/hurricane1.html/<int:pk>/', views.Hurricanes, name='hurricanes'),
     path('cause/causes1.html/<int:pk>/', views.Causer1, name='causer1'),
     path('saveenquiry/', views.saveEnquiry,name='saveenquiry'),
-    # path('contact/send_email/', views.send_email,name=' send_email'),
+    path('Donate_cart/', views.Donate_cart,name='Donate_cart'),
+    path('donate/', donation, name='donation'),
+    path('success/<str:args>/', views.successMsg, name='success')
 
 
 

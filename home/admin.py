@@ -9,6 +9,8 @@ admin.site.register(Image)
 admin.site.register(Hurricane)
 admin.site.register(Causers)
 admin.site.register(contactInfo)
+admin.site.register(Donation)
+admin.site.register(Number)
 
 
 
