@@ -3,6 +3,32 @@
 {% block content %}
 
 
+
+
+    <style>
+.hero-wrap {
+  width: 100%;
+  height: calc((100vh - 117px) / 10); /* Set the height to half of the original value */
+  min-height: 600px;
+  position: relative;
+}
+
+.hero-wrap.hero-wrap-2 {
+  height: 100px; /* Set the height to half of the original value for this specific case */
+}
+
+.hero-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0;
+  background: #000;
+}
+</style>
+
     
     <div class="hero-wrap" style="background-image: url('{% static 'assets/images/bg_7.jpg' %}');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -10,9 +36,11 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Doing Nothing is Not An Option of Our Life</h1>
+<<<<<<< Updated upstream
             <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Created by <a href="#">Colorlib.com</a></p>
+=======
+>>>>>>> Stashed changes
 
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://vimeo.com/45830194" class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span class="icon-play mr-2"></span>Watch Video</a></p>
           </div>
         </div>
       </div>
@@ -52,7 +80,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section">
+    <section class="ftco-section" style="padding-top: 40px; padding-bottom: 10px">
     	<div class="container">
     		<div class="row">
           <div class="col-md-4 d-flex align-self-stretch ftco-animate">

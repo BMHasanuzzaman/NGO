@@ -18,9 +18,13 @@
       <excludeFolder url="file://$MODULE_DIR$/Pobon" />
 =======
       <excludeFolder url="file://$MODULE_DIR$/riyad" />
+<<<<<<< Updated upstream
 >>>>>>> origin/riyad
+=======
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+>>>>>>> Stashed changes
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.11 (NGO)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (NGO) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

@@ -1,6 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
+    <style>
+.hero-wrap {
+  width: 100%;
+  height: calc((100vh - 117px) / 8); /* Set the height to half of the original value */
+  min-height: 70px;
+  position: relative;
+}
+
+.hero-wrap.hero-wrap-2 {
+  height: 100px; /* Set the height to half of the original value for this specific case */
+}
+
+.hero-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0;
+  background: #000;
+}
+
+</style>
     
     <div class="hero-wrap" style="background-image: url('/static/assets/images/bg_6.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>

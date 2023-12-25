@@ -1,14 +1,43 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<<<<<<< Updated upstream
     
     <div class="hero-wrap" style="background-image: url('/static/assets/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+=======
+
+    <style>
+.hero-wrap {
+  width: 100%;
+  height: calc((100vh - 117px) / 8); /* Set the height to half of the original value */
+  min-height: 70px;
+  position: relative;
+}
+
+.hero-wrap.hero-wrap-2 {
+  height: 100px; /* Set the height to half of the original value for this specific case */
+}
+
+.hero-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0;
+  background: #000;
+}
+
+</style>
+
+    <div class="hero-wrap" style="background-image: url('/static/assets/images/bg_2.jpg');"
+         data-stellar-background-ratio="0.5" xmlns:color="http://www.w3.org/1999/xhtml">
+>>>>>>> Stashed changes
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Blog</h1>
           </div>
         </div>
       </div>
