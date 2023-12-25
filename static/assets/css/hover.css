@@ -1,0 +1,10 @@
+/* Add your other styles for navbar and links */
+.nav-link:hover {
+    background-color: #f0f0f0; /* Change to your desired background color on hover */
+    color: #333; /* Change to your desired text color on hover */
+}
+
+.nav-link.active {
+    background-color: #f0f0f0; /* Change to your desired background color for active state */
+    color: #333; /* Change to your desired text color for active state */
+}
