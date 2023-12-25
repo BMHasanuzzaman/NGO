@@ -278,16 +278,26 @@
       </div>
     </section>
 
-<section class="ftco-section ftco-gallery">
-    <div class="container imageCont">
-    <div class="d-md-flex">
-        {% for x in pics %}
-            <a href="{{ x.image.url }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url('{{ x.image.url }}');">
-            </a>
-        {% endfor %}
-    </div>
-    </div>
+<section class="ftco-gallery">
+        <div class="d-md-flex">
+            {% for x in pics|slice:":8" %}
+                <a href="{{ x.image.url }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url('{{ x.image.url }}');">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="icon-search"></span>
+                    </div>
+                </a>
+                {% if forloop.counter|divisibleby:4 or forloop.last %}
+                    </div>
+                    {% if not forloop.last %}
+                        <div class="d-md-flex">
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
 </section>
+
+
+
 
     <section class="ftco-section">
       <div class="container">
